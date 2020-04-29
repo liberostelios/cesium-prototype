@@ -33,7 +33,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: 'src/index.html'
         }),
-        new CopywebpackPlugin([ { from: path.join(__dirname, "../data/delft_lod22.3dt/lod13_v2.delft_0_lod22_3d"), to: 'data' } ]),
+        new CopywebpackPlugin([ { from: path.join(__dirname, 'data'), to: 'data' } ]),
         // Copy Cesium Assets, Widgets, and Workers to a static directory
         new CopywebpackPlugin([ { from: path.join(cesiumSource, cesiumWorkers), to: 'Workers' } ]),
         new CopywebpackPlugin([ { from: path.join(cesiumSource, 'Assets'), to: 'Assets' } ]),
